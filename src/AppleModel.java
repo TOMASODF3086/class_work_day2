@@ -1,11 +1,12 @@
 /* The class for Apple Model */
 public class AppleModel {
-/*This is a state atribute/field/property*/
+/*This is a state attribute/field/property*/
 
     private String color;
     private String type;
     private int weight;
     private boolean ripe;
+    private int juice = 10;
 
 
     public void setColor(String color){
@@ -15,7 +16,7 @@ public class AppleModel {
     }
 
     public String getColor(){
-        return this.color;
+            return this.color;
     }
 
 
@@ -23,9 +24,8 @@ public class AppleModel {
         this.ripe = ripe;
     }
 
-
     public boolean isRipe(){
-        return this.ripe;
+            return this.ripe;
     }
 
     public int getWeight(){
@@ -38,8 +38,19 @@ public class AppleModel {
                 this.weight = weight;
         }
     }
+/*
+ * Decrement juice by 1 if juice > 0
+ * @return juice left in Apple
+ */
+    public int juiceApple(){
+        if(this.juice > 0){
+            this.juice--;
+        }
+        return this.juice;
+    }
+    }
     /*This is an assignment variable,use THIS to define a parameter within a method, it references the weight class  */
     /* Goal is to make code highly readable */
-    /* String is an object, int and bool are primitive data types */
-}
+    /* String is an object in java, int and bool are primitive data types in java*/
+
 
